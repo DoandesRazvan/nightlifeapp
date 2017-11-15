@@ -14,7 +14,7 @@ const port = process.env.PORT || 3000;
 // map global promise - get rid of warning
 mongoose.Promise = global.Promise;
 
-mongoose.connect('mongodb://localhost/nightlifeapp', {useMongoClient: true});
+mongoose.connect('mongodb://admin:admin@ds159235.mlab.com:59235/thenightlife', {useMongoClient: true});
 
 // routes
 const users = require('./routes/users');
