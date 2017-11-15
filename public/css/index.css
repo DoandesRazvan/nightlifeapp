@@ -1,0 +1,217 @@
+* {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box; }
+
+body, h1 {
+  margin: 0;
+  padding: 0; }
+
+#navbar {
+  height: 5vh;
+  background: #000000;
+  text-align: right;
+  line-height: 5vh; }
+  #navbar a {
+    margin-right: 20px;
+    font-family: Segoe UI, sans-serif;
+    font-size: 22px;
+    color: #D8D8D8;
+    text-decoration: none; }
+
+.success-message, .error-message {
+  width: 600px;
+  height: 60px;
+  padding: 0 5px;
+  margin-top: 10px;
+  border-radius: 30px;
+  font-family: "Source Code Pro", monospace;
+  font-size: 16px;
+  color: #F2F3F4;
+  line-height: 60px;
+  text-align: center; }
+
+.success-message {
+  background: #83E78F;
+  color: #009512;
+  border: solid 2px #3CC14C; }
+
+.error-message {
+  background: #FFAAAA;
+  color: #a94442;
+  border: solid 2px #D46A6A; }
+
+input::-webkit-input-placeholder {
+  color: #BFC3BA; }
+
+input:-moz-placeholder {
+  color: #BFC3BA; }
+
+input::-moz-placeholder {
+  color: #BFC3BA; }
+
+input:-ms-input-placeholder {
+  color: #BFC3BA; }
+
+#gradient-background {
+  background: -webkit-gradient(linear, left top, left bottom, from(#000000), to(#2F2235));
+  background: linear-gradient(to bottom, #000000, #2F2235); }
+  #gradient-background #intro {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    height: 95vh;
+    position: relative; }
+    #gradient-background #intro #lead {
+      margin-top: 105px;
+      font-family: Arial, Helvetica, sans-serif;
+      font-size: 300px;
+      color: #D8D8D8; }
+    #gradient-background #intro form {
+      position: absolute;
+      bottom: 320px; }
+      #gradient-background #intro form #search-bar {
+        width: 1300px;
+        height: 200px;
+        padding: 0 30px;
+        background: rgba(0, 0, 0, 0.3);
+        font-family: "Source Code Pro", monospace;
+        font-size: 54px;
+        color: #EEEEEE;
+        border: solid 3px #BFC3BA;
+          border-radius: 80px;
+        outline: none; }
+    #gradient-background #intro #description {
+      max-width: 1200px;
+      margin-top: 150px;
+      font-family: Segoe UI, sans-serif;
+      font-size: 20px;
+      color: #CCCCCC; }
+  #gradient-background #places {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column; }
+    #gradient-background #places .place {
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      width: 1300px;
+      height: 250px;
+      margin: 60px 0; }
+      #gradient-background #places .place .place-data {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-align: center;
+        -ms-flex-align: center;
+        align-items: center;
+        -webkit-box-pack: end;
+        -ms-flex-pack: end;
+        justify-content: flex-end;
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+        flex-direction: column;
+        width: 300px;
+        height: 250px; }
+        #gradient-background #places .place .place-data .place-photo {
+          width: 180px;
+          height: 180px;
+          -o-object-fit: cover;
+          object-fit: cover;
+          border: solid 3px #BFC3BA;
+            border-radius: 50%; }
+        #gradient-background #places .place .place-data .people-going {
+          display: inline-block;
+          width: 200px;
+          height: 30px;
+          margin-top: 15px;
+          background: #3F3244;
+          font-family: Segoe UI, sans-serif;
+          font-size: 16px;
+          text-align: center;
+          color: #EEEEEE;
+          border: solid 1px #999999;
+            border-radius: 30px;
+          cursor: pointer;
+          -webkit-transition: all 0.15s ease-in-out;
+          transition: all 0.15s ease-in-out;
+          outline: none; }
+          #gradient-background #places .place .place-data .people-going:hover {
+            background: #25192A; }
+      #gradient-background #places .place .place-details {
+        position: relative;
+        width: 1000px;
+        height: 250px;
+        padding: 20px 50px;
+        background: #25192A;
+        color: white;
+        border: solid 3px #BFC3BA;
+          border-radius: 100px; }
+        #gradient-background #places .place .place-details .place-name {
+          font-family: "Source Code Pro", monospace;
+          font-size: 24px;
+          text-decoration: none;
+          color: #EEEEEE; }
+          #gradient-background #places .place .place-details .place-name:hover {
+            text-decoration: underline; }
+        #gradient-background #places .place .place-details .place-info p {
+          font-family: Segoe UI, sans-serif;
+          font-size: 18px;
+          font-style: italic;
+          color: #CCCCCC; }
+          #gradient-background #places .place .place-details .place-info p i {
+            color: #FFFFFF; }
+        #gradient-background #places .place .place-details:before, #gradient-background #places .place .place-details:after {
+          display: block;
+          position: absolute;
+          width: 0;
+          height: 0;
+          content: "";
+          border-style: solid; }
+      #gradient-background #places .place:nth-child(odd) .place-details:after {
+        bottom: 81px;
+        left: -79px;
+        border-color: transparent #25192A transparent transparent;
+        border-width: 40px; }
+      #gradient-background #places .place:nth-child(odd) .place-details:before {
+        bottom: 77px;
+        left: -87px;
+        border-color: transparent #BFC3BA transparent transparent;
+        border-width: 44px; }
+      #gradient-background #places .place:nth-child(even) .place-data {
+        -webkit-box-ordinal-group: 3;
+        -ms-flex-order: 2;
+        order: 2; }
+      #gradient-background #places .place:nth-child(even) .place-details {
+        -webkit-box-ordinal-group: 2;
+        -ms-flex-order: 1;
+        order: 1; }
+      #gradient-background #places .place:nth-child(even) .place-details:after {
+        bottom: 81px;
+        right: -79px;
+        border-color: transparent transparent transparent #25192A;
+        border-width: 40px; }
+      #gradient-background #places .place:nth-child(even) .place-details:before {
+        bottom: 77px;
+        right: -87px;
+        border-color: transparent transparent transparent #BFC3BA;
+        border-width: 44px; }
+    #gradient-background #places .place:first-child {
+      margin-top: 0; }

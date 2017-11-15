@@ -1,0 +1,197 @@
+@import '../0-utilities/_variables'
+@import '../0-utilities/_reset'
+@import '../1-modules/_navbar'
+@import '../1-modules/_messages'
+
+@mixin placeholder()
+  input::-webkit-input-placeholder
+    @content
+  input:-moz-placeholder
+    @content
+  input::-moz-placeholder
+    @content
+  input:-ms-input-placeholder
+    @content
+
+@include placeholder() // input placeholder
+  color: $light-gold
+
+#gradient-background
+  background: linear-gradient(to bottom, #000000, #2F2235)
+
+  #intro
+    display: flex
+    align-items: center
+    flex-direction: column
+    height: 95vh
+    position: relative
+
+    #lead
+      margin-top: 105px
+
+      font:
+        family: Arial, Helvetica, sans-serif
+        size: 300px
+      color: $faded-gray
+
+    form
+      position: absolute
+      bottom: 320px
+
+      #search-bar
+        width: 1300px
+        height: 200px
+        padding: 0 30px
+        background: rgba(0, 0, 0, 0.3)
+
+        font:
+          family: $sourcecode
+          size: 54px
+        color: $light-gray
+
+        border: solid 3px $light-gold
+          radius: 80px
+
+        outline: none
+
+    #description
+      max-width: 1200px
+      margin-top: 150px
+
+      font:
+        family: $segoe
+        size: 20px
+      color: $solid-gray
+
+  #places
+    display: flex
+    align-items: center
+    justify-content: center
+    flex-direction: column
+
+    .place
+      display: flex
+      width: 1300px
+      height: 250px
+      margin: 60px 0
+
+      .place-data
+        display: flex
+        align-items: center
+        justify-content: flex-end
+        flex-direction: column
+        width: 300px
+        height: 250px
+
+        .place-photo
+          width: 180px
+          height: 180px
+          object-fit: cover
+
+          border: solid 3px $light-gold
+            radius: 50%
+
+        .people-going
+          display: inline-block
+          width: 200px
+          height: 30px
+          margin-top: 15px
+          background: $purple
+
+          font:
+            family: $segoe
+            size: 16px
+          text-align: center
+          color: $light-gray
+
+          border: solid 1px #999999
+            radius: 30px
+
+          cursor: pointer
+
+          transition: all 0.15s ease-in-out
+          outline: none
+
+          &:hover
+            background: $dark-purple
+
+      .place-details
+        position: relative
+        width: 1000px
+        height: 250px
+        padding: 20px 50px
+        background: $dark-purple
+
+        color: white
+
+        border: solid 3px $light-gold
+          radius: 100px
+
+        .place-name
+          font:
+            family: $sourcecode
+            size: 24px
+          text-decoration: none
+          color: $light-gray
+
+          &:hover
+            text-decoration: underline
+
+        .place-info
+          p
+            font:
+              family: $segoe
+              size: 18px
+              style: italic
+            color: $solid-gray
+
+            i
+              color: #FFFFFF
+              
+        &:before, &:after
+          display: block
+          position: absolute
+          width: 0
+          height: 0
+          content: ""
+
+          border-style: solid  
+
+      &:nth-child(odd)
+        .place-details:after
+          bottom: 81px
+          left: -79px
+
+          border-color: transparent $dark-purple transparent transparent 
+          border-width: 40px
+
+        .place-details:before
+          bottom: 77px
+          left: -87px
+
+          border-color: transparent $light-gold transparent transparent
+          border-width: 44px
+
+      &:nth-child(even)
+        .place-data
+          order: 2
+
+        .place-details
+          order: 1
+
+        .place-details:after
+          bottom: 81px
+          right: -79px
+
+          border-color: transparent transparent transparent $dark-purple
+          border-width: 40px
+
+        .place-details:before
+          bottom: 77px
+          right: -87px
+
+          border-color: transparent transparent transparent $light-gold
+          border-width: 44px    
+
+    .place:first-child
+      margin-top: 0

@@ -1,0 +1,46 @@
+doctype html
+html
+	head
+		title Nightlife
+		link(rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Code+Pro")
+		link(rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css")
+		link(rel="stylesheet" href="../css/index.css")
+	body
+		include ../partials/_navbar
+
+		#gradient-background
+			section#intro
+				h1#lead Nightlife
+				form(action="/", method="POST")
+					if location
+						input(type="text", value=location, name="location")#search-bar
+					else
+						input(type="text", placeholder="Search for a place tonight...", name="location")#search-bar
+						
+				p#description Nightlife is an application that allows you to search for the best locals to go out at night. You can also see what places people are interested in so you can coordinate and go out together. 
+				
+				include ../partials/_messages
+
+			section#places
+				if places
+					each place in places
+						.place
+							.place-data
+								img(src=place.image).place-photo
+
+								form(action=location + "?_method=PUT", method="POST")
+									input(type="hidden", name="_method" value="PUT")
+									input(type="hidden", name="id" value=place.id)
+									button.people-going= place.going + " going tonight"
+							.place-details
+								a(href=place.url, target="_blank").place-name= place.name 
+								.place-info
+									p
+										i.fa.fa-star.fa-2x
+										= " " + place.rating + "/5"
+									p
+										i.fa.fa-phone.fa-2x
+										= " " + place.phone
+									p
+										i.fa.fa-location-arrow.fa-2x
+										= " " + place.address + ", " + place.city + ", " + place.zip

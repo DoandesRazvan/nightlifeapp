@@ -1,0 +1,105 @@
+* {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box; }
+
+body, h1 {
+  margin: 0;
+  padding: 0; }
+
+#navbar {
+  height: 5vh;
+  background: #000000;
+  text-align: right;
+  line-height: 5vh; }
+  #navbar a {
+    margin-right: 20px;
+    font-family: Segoe UI, sans-serif;
+    font-size: 22px;
+    color: #D8D8D8;
+    text-decoration: none; }
+
+#gradient-background {
+  background: -webkit-gradient(linear, left top, left bottom, from(#000000), to(#2F2235));
+  background: linear-gradient(to bottom, #000000, #2F2235); }
+  #gradient-background form {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    min-height: 95vh;
+    padding: 20px;
+    color: white; }
+    #gradient-background form .form-group {
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-orient: vertical;
+      -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+      flex-direction: column;
+      margin-top: 60px; }
+      #gradient-background form .form-group label {
+        font-family: "Source Code Pro", monospace;
+        font-size: 24px;
+        color: #EEEEEE; }
+      #gradient-background form .form-group input {
+        width: 600px;
+        height: 80px;
+        padding: 10px;
+        background: #25192A;
+        border: solid 2px #BFC3BA;
+          border-radius: 30px;
+        font-family: Segoe UI, sans-serif;
+        font-size: 20px;
+        color: #CCCCCC;
+        outline: none; }
+    #gradient-background form input[type="submit"] {
+      width: 400px;
+      height: 80px;
+      margin-top: 30px;
+      background: #EEEEEE;
+      font-family: "Source Code Pro", monospace;
+      font-size: 22px;
+      font-weight: 500;
+      color: #25192A;
+      border: none;
+        border-radius: 30px;
+      cursor: pointer;
+      outline: none;
+      -webkit-transition: all 0.3s ease-in-out;
+      transition: all 0.3s ease-in-out; }
+      #gradient-background form input[type="submit"]:hover {
+        background: #1E1024;
+        color: #EEEEEE;
+        border: solid 2px #BFC3BA; }
+
+.success-message, .error-message {
+  width: 600px;
+  height: 60px;
+  padding: 0 5px;
+  margin-top: 10px;
+  border-radius: 30px;
+  font-family: "Source Code Pro", monospace;
+  font-size: 16px;
+  color: #F2F3F4;
+  line-height: 60px;
+  text-align: center; }
+
+.success-message {
+  background: #83E78F;
+  color: #009512;
+  border: solid 2px #3CC14C; }
+
+.error-message {
+  background: #FFAAAA;
+  color: #a94442;
+  border: solid 2px #D46A6A; }

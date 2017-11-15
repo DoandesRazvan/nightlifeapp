@@ -1,0 +1,11 @@
+if errors
+	each val in errors
+		.error-message= val
+
+if success_msg
+	each val in success_msg
+		.success-message #{success_msg}
+		
+if error_msg
+	each val in error_msg
+		.error-message #{error_msg}

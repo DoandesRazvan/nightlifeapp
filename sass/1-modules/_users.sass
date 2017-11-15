@@ -1,0 +1,65 @@
+#gradient-background
+  background: linear-gradient(to bottom, #000000, #2F2235)
+
+  form
+    display: flex
+    align-items: center
+    justify-content: center
+    flex-direction: column
+    min-height: 95vh
+    padding: 20px
+
+    color: white
+
+    .form-group
+      display: flex
+      flex-direction: column
+      margin-top: 60px
+
+      label
+        font:
+          family: $sourcecode
+          size: 24px
+        color: $light-gray
+
+      input
+        width: 600px
+        height: 80px
+        padding: 10px
+        background: $dark-purple
+
+        border: solid 2px $light-gold
+          radius: 30px
+
+        font:
+          family: $segoe
+          size: 20px
+        color: $solid-gray  
+
+        outline: none
+
+    input[type="submit"]
+      width: 400px
+      height: 80px
+      margin-top: 30px
+      background: $light-gray
+
+      font:
+        family: $sourcecode
+        size: 22px
+        weight: 500
+      color: $dark-purple
+
+      border: none
+        radius: 30px
+
+      cursor: pointer
+      outline: none
+      transition: all 0.3s ease-in-out
+
+      &:hover
+        background: #1E1024
+
+        color: $light-gray
+
+        border: solid 2px $light-gold
