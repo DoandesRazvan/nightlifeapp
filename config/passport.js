@@ -5,7 +5,7 @@ const LocalStrategy = require('passport-local').Strategy,
 const User = mongoose.model('users');
 
 module.exports = function(passport) {
-    passport.use(new LocalStrategy({usernameField: 'username'}, (req, username, password, done) => {
+    passport.use(new LocalStrategy({usernameField: 'username', passReqToCallback: true}, (req, username, password, done) => {
         User.findOne({username: username})
             .then(user => {
                 if (!user)
@@ -19,7 +19,7 @@ module.exports = function(passport) {
                     else
                         return done(null, false, req.flash('error_msg', 'Incorrect password'));
                 });
-            })
+            });
     }));
 
     passport.serializeUser((user, done) => {

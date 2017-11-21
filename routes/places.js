@@ -97,7 +97,10 @@ router.put('/:location', ensureAuthenticated, (req, res) => {
                      req.flash('success_msg', 'Your attendance was registered!');
                  } else {
                      place.users_attending.splice(userIndex, 1);
-                     
+
+                     if (place.users_attending.length == 0)
+                         place.remove();
+                         
                      req.flash('success_msg', 'Your attendance has been cancelled!');
                  }
 

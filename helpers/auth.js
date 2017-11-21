@@ -5,8 +5,6 @@ module.exports = {
 
         req.flash('error_msg', 'Please login! Unauthorized action.');
 
-        console.log(req.session.returnTo);
-
         res.redirect('/users/login');
     }
 }

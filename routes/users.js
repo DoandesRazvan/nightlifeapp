@@ -10,7 +10,6 @@ require('../models/User');
 const User = mongoose.model('users');
 
 router.get('/register', (req, res) => {
-    console.log(req.location);
     res.render('./sections/register');
 });
 
